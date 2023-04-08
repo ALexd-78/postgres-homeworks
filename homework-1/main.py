@@ -17,14 +17,6 @@ file1 = './north_data/customers_data.csv'
 file2 = './north_data/employees_data.csv'
 file3 = './north_data/orders_data.csv'
 
-# def get_read_csv(file):
-#     data = []
-#     with open(file, 'r', encoding='UTF=8') as f:
-#         data_file = csv.DictReader(f)
-#         for i in data_file:
-#             data.append(i)
-#         return data
-
 
 def get_read_csv(file):
     data = []
@@ -44,9 +36,6 @@ try:
                 # exeсute query
                 cur.execute('INSERT INTO customers VALUES (%s, %s, %s)', i)
                 cur.execute('SELECT * FROM customers')
-                rows = cur.fetchall()
-                for row in rows:
-                    print(row)
 finally:
     # close connection
     conn.close()
@@ -57,12 +46,8 @@ try:
         with conn.cursor() as cur:
             data_employee = get_read_csv(file2)
             for i in data_employee:
-                    exeсute query
+                    # exeсute query
                 cur.execute('INSERT INTO employees (first_name, last_name, title, birth_date, notes) VALUES (%s, %s, %s, %s, %s)', i)
-                # cur.execute('SELECT * FROM employees')
-                # rows = cur.fetchall()
-                # for row in rows:
-                #     print(row)
 finally:
     # close connection
     conn.close()
@@ -75,10 +60,6 @@ try:
             for i in data_orders:
                 # exeсute query
                 cur.execute('INSERT INTO orders VALUES (%s, %s, %s, %s, %s)', i)
-                # cur.execute('SELECT * FROM employees')
-                # rows = cur.fetchall()
-                # for row in rows:
-                #     print(row)
 finally:
     # close connection
     conn.close()
