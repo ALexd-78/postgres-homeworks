@@ -36,49 +36,49 @@ def get_read_csv(file):
         return data
 
 
-# try:
-#     with conn:
-#         with conn.cursor() as cur:
-#             data_customer = get_read_csv(file2)
-#             for i in data_customer:
-#                 # exeсute query
-#                 cur.execute('INSERT INTO customers VALUES (%s, %s, %s)', i)
-#                 cur.execute('SELECT * FROM customers')
-#                 rows = cur.fetchall()
-#                 for row in rows:
-#                     print(row)
-# finally:
-#     # close connection
-#     conn.close()
+try:
+    with conn:
+        with conn.cursor() as cur:
+            data_customer = get_read_csv(file2)
+            for i in data_customer:
+                # exeсute query
+                cur.execute('INSERT INTO customers VALUES (%s, %s, %s)', i)
+                cur.execute('SELECT * FROM customers')
+                rows = cur.fetchall()
+                for row in rows:
+                    print(row)
+finally:
+    # close connection
+    conn.close()
 
 
-# try:
-#     with conn:
-#         with conn.cursor() as cur:
-#             data_employee = get_read_csv(file2)
-#             for i in data_employee:
-                    # exeсute query
-#                 cur.execute('INSERT INTO employees (first_name, last_name, title, birth_date, notes) VALUES (%s, %s, %s, %s, %s)', i)
-#                 # cur.execute('SELECT * FROM employees')
-#                 # rows = cur.fetchall()
-#                 # for row in rows:
-#                 #     print(row)
-# finally:
-#     # close connection
-#     conn.close()
+try:
+    with conn:
+        with conn.cursor() as cur:
+            data_employee = get_read_csv(file2)
+            for i in data_employee:
+                    exeсute query
+                cur.execute('INSERT INTO employees (first_name, last_name, title, birth_date, notes) VALUES (%s, %s, %s, %s, %s)', i)
+                # cur.execute('SELECT * FROM employees')
+                # rows = cur.fetchall()
+                # for row in rows:
+                #     print(row)
+finally:
+    # close connection
+    conn.close()
 
 
-# try:
-#     with conn:
-#         with conn.cursor() as cur:
-#             data_orders = get_read_csv(file3)
-#             for i in data_orders:
-#                 # exeсute query
-#                 cur.execute('INSERT INTO orders VALUES (%s, %s, %s, %s, %s)', i)
-#                 # cur.execute('SELECT * FROM employees')
-#                 # rows = cur.fetchall()
-#                 # for row in rows:
-#                 #     print(row)
-# finally:
-#     # close connection
-#     conn.close()
+try:
+    with conn:
+        with conn.cursor() as cur:
+            data_orders = get_read_csv(file3)
+            for i in data_orders:
+                # exeсute query
+                cur.execute('INSERT INTO orders VALUES (%s, %s, %s, %s, %s)', i)
+                # cur.execute('SELECT * FROM employees')
+                # rows = cur.fetchall()
+                # for row in rows:
+                #     print(row)
+finally:
+    # close connection
+    conn.close()
